@@ -27,7 +27,7 @@
 
   --f: "Onest","Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 
-  --t-hero: clamp(2.9rem,7.8vw,6.6rem);
+  --t-hero: clamp(2.55rem,7.8vw,6.6rem);
   --t-h2:   clamp(1.85rem,3.8vw,3rem);
   --t-h3:   clamp(1.05rem,1.7vw,1.25rem);
   --t-lead: clamp(1rem,1.4vw,1.16rem);
@@ -133,8 +133,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
 .burger{ display:none; width:42px; height:42px; padding:11px 9px; flex-direction:column; justify-content:space-between; }
 .burger span{ display:block; height:2px; background:var(--navy); border-radius:2px; transition:transform .3s var(--ease); }
-.burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(4px) rotate(45deg); }
-.burger[aria-expanded="true"] span:nth-child(2){ transform:translateY(-4px) rotate(-45deg); }
+.burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2){ transform:translateY(-5px) rotate(-45deg); }
 
 /* ============================================================
    HERO
@@ -423,7 +423,50 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .header__cta{ display:none; }
 }
 @media (max-width:639px){
-  :root{ --header-h:62px; }
+  :root{
+    --header-h:56px;
+    /* усе щільніше: менше повітря між секціями й дрібніша шкала */
+    --pad-y:clamp(2.6rem,8vw,3.6rem);
+    --t-h2:clamp(1.6rem,6.4vw,2.1rem);
+    --t-h3:1rem;
+    --t-lead:.95rem;
+    --r-card:16px;
+    --r-img:12px;
+  }
+
+  /* дві колонки замість стрічки однакових блоків */
+  .cards--3{ grid-template-columns:repeat(2,1fr); gap:.9rem .8rem; }
+  .work__body{ padding:.7rem .1rem 0; }
+  .work__body b{ font-size:.88rem; letter-spacing:-.015em; }
+  .work__body i{ font-size:.78rem; line-height:1.45; margin-top:.25rem; }
+  .work__body em{ font-size:.78rem; margin-top:.5rem; }
+
+  .steps{ grid-template-columns:repeat(2,1fr); gap:.9rem .8rem; }
+  .steps__body{ padding:.9rem .85rem 1.1rem; }
+  .steps__n{ width:28px; height:28px; font-size:.85rem; margin-bottom:.6rem; }
+  .steps h3{ font-size:.97rem; margin-bottom:.3rem; }
+  .steps p{ font-size:.8rem; line-height:1.5; }
+
+  /* фото у блоках нижчі, щоб не займали цілий екран */
+  .feat__shot{ aspect-ratio:1; }
+  .feat + .feat{ margin-top:2.2rem; }
+  .feat__head{ font-size:clamp(1.9rem,8.6vw,2.5rem); margin-top:.5rem; margin-bottom:1.2rem; }
+
+  .verse{ padding:2.8rem 0 3.2rem; }
+  .verse__text{ font-size:clamp(1.35rem,6.2vw,1.8rem); }
+
+  .studio__text{ margin-bottom:1.8rem; }
+  .team{ max-width:215px; gap:1.3rem; }
+  .team__name{ margin-top:.6rem; font-size:1rem; }
+  .team__role{ font-size:.76rem; }
+
+  .hero{ padding-top:calc(var(--header-h) + 2rem); padding-bottom:2.5rem; }
+  .hero__note{ font-size:.95rem; margin-top:1rem; }
+  .chips a{ padding:.5rem .95rem; font-size:.85rem; }
+  .btn--lg{ padding:.85rem 2.2rem; font-size:.98rem; }
+
+  .panel{ padding:2.2rem 1.2rem; }
+  .head{ margin-bottom:1.6rem; }
   .footer__bottom{ justify-content:flex-start; }
 }
 
