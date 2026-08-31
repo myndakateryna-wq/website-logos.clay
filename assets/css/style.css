@@ -137,33 +137,41 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 .burger[aria-expanded="true"] span:nth-child(2){ transform:translateY(-5px) rotate(-45deg); }
 
 /* ============================================================
-   HERO
+   HERO — текст ліворуч, інтерактивна чашка праворуч
    ============================================================ */
 .hero{
   position:relative;
-  padding-top:calc(var(--header-h) + clamp(3.5rem,8vw,7rem));
-  padding-bottom:clamp(3.5rem,7vw,6rem);
-  text-align:center;
+  padding-top:calc(var(--header-h) + clamp(2rem,5vw,4rem));
+  padding-bottom:clamp(2.5rem,6vw,4.5rem);
   overflow:hidden;
-  background-image:url("../img/hero.jpg");
-  background-size:cover;
-  background-position:center 42%;
-  background-repeat:no-repeat;
+  /* глиняна поверхня: світло згори, нерівності тону, теплий замішаний колір */
+  background:
+    radial-gradient(130% 78% at 50% -8%, rgba(255,252,246,.62), transparent 62%),
+    radial-gradient(62% 52% at 14% 28%, rgba(181,113,74,.20), transparent 66%),
+    radial-gradient(58% 48% at 88% 68%, rgba(150,86,47,.18), transparent 66%),
+    radial-gradient(50% 40% at 70% 12%, rgba(214,188,160,.35), transparent 70%),
+    linear-gradient(168deg, #f0e2d2 0%, #e5cfb9 52%, #d8bda2 100%);
 }
-/* кремова вуаль поверх фото — без неї синій текст не читається */
-.hero::after{
-  content:""; position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(180deg,
-    rgba(249,244,236,.88) 0%,
-    rgba(249,244,236,.74) 26%,
-    rgba(249,244,236,.70) 55%,
-    rgba(249,244,236,.80) 80%,
-    rgba(249,244,236,.96) 100%);
+/* зерно — глина матова й неоднорідна, без нього фон виглядає пластиковим */
+.hero::before{
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  opacity:.55; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23c)' opacity='.5'/%3E%3C/svg%3E");
 }
 .hero > *{ position:relative; z-index:1; }
-.hero__inner{ display:flex; flex-direction:column; align-items:center; }
+/* глина м'яко сходить у кремовий, щоб між секціями не було різкої межі */
+.hero::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:clamp(60px,9vw,120px);
+  pointer-events:none; z-index:0;
+  background:linear-gradient(180deg, rgba(249,244,236,0), var(--cream));
+}
+
+.hero__inner{ display:grid; grid-template-columns:1fr; gap:clamp(1.5rem,4vw,3rem); align-items:center; }
+.hero__text{ text-align:center; }
+
 .hero__title{ font-size:var(--t-hero); font-weight:800; line-height:1.03; letter-spacing:-.04em; }
-.hero__sub{ margin-top:clamp(1.4rem,3vw,2.2rem); font-size:1rem; color:var(--muted); }
+/* на глині сірий провалюється — теплий темний тримає контраст */
+.hero__sub{ margin-top:clamp(1.2rem,2.5vw,1.8rem); font-size:1rem; color:#4b4034; }
 
 .chips{ display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-top:1rem; }
 .chips a{
@@ -175,7 +183,39 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 .chips a:hover{ background:#fff; border-color:var(--navy); transform:translateY(-2px); }
 
 .hero .btn--lg{ margin-top:1.8rem; }
-.hero__note{ margin-top:1.4rem; font-size:clamp(1.02rem,1.7vw,1.2rem); line-height:1.55; color:var(--muted); max-width:34rem; }
+.hero__note{ margin-top:1.4rem; font-size:clamp(1.02rem,1.7vw,1.2rem); line-height:1.55; color:#4b4034; max-width:34rem; margin-inline:auto; }
+
+/* ---------- сама чашка ---------- */
+.mug{ position:relative; display:flex; flex-direction:column; align-items:center; }
+
+.mug__stage{
+  width:100%;
+  aspect-ratio:4/3;
+  /* перспектива дає нахилу об'єм, а не пласке скошування */
+  perspective:900px;
+  will-change:transform;
+}
+.mug__video{
+  width:100%; height:100%; object-fit:cover;
+  /* фон відео світло-сірий і холодніший за кремовий — розмиваємо краї
+     й трохи зігріваємо, щоб чашка ніби висіла просто на сторінці */
+  -webkit-mask-image:radial-gradient(ellipse 58% 56% at 50% 50%, #000 32%, transparent 88%);
+  mask-image:radial-gradient(ellipse 58% 56% at 50% 50%, #000 32%, transparent 88%);
+  filter:sepia(.34) saturate(1.22) hue-rotate(-6deg) brightness(1.03) contrast(1.02);
+  transform:scale(1.14);
+  transform-origin:50% 50%;
+  will-change:transform;
+}
+
+.mug__hint{
+  margin-top:.2rem;
+  font-size:var(--t-micro); letter-spacing:.2em; text-transform:uppercase;
+  color:var(--faint);
+  opacity:0; transition:opacity .6s var(--ease);
+}
+.mug.is-ready .mug__hint{ opacity:1; }
+.mug.is-touched .mug__hint{ opacity:0; }
+@media (hover:none),(pointer:coarse){ .mug__hint{ display:none; } }
 
 /* ============================================================
    ФОТО — заглушка, поки файла немає
@@ -401,6 +441,12 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 }
 @media (min-width:900px){
   .cards--3{ grid-template-columns:repeat(3,1fr); }
+  .hero__inner{ grid-template-columns:1.02fr .98fr; gap:clamp(2rem,4vw,4rem); }
+  .hero__text{ text-align:left; }
+  .hero__title{ font-size:clamp(2.6rem,4.6vw,4.3rem); }
+  .chips{ justify-content:flex-start; }
+  .hero__note{ margin-inline:0; }
+  .mug__stage{ aspect-ratio:4/3; }
   .feat{ grid-template-columns:1fr 1.15fr; gap:clamp(2.5rem,5vw,4.5rem); }
   .feat--flip .feat__text{ order:2; }
   .feat--flip .feat__shot{ order:1; }
@@ -460,7 +506,10 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .team__name{ margin-top:.6rem; font-size:1rem; }
   .team__role{ font-size:.76rem; }
 
-  .hero{ padding-top:calc(var(--header-h) + 2rem); padding-bottom:2.5rem; }
+  .hero{ padding-top:calc(var(--header-h) + 1.6rem); padding-bottom:1.5rem; }
+  .hero__inner{ gap:.5rem; }
+  .mug__stage{ aspect-ratio:16/10; max-width:420px; margin-inline:auto; }
+  .mug__video{ object-fit:contain; transform:scale(1.06); }
   .hero__note{ font-size:.95rem; margin-top:1rem; }
   .chips a{ padding:.5rem .95rem; font-size:.85rem; }
   .btn--lg{ padding:.85rem 2.2rem; font-size:.98rem; }

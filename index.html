@@ -83,20 +83,34 @@
 <section class="hero" id="top">
   <div class="wrap hero__inner">
 
-    <h1 class="hero__title">Кераміка,<br>яку хочеться<br>тримати в руках</h1>
+    <div class="hero__text">
+      <h1 class="hero__title">Кераміка,<br>яку хочеться<br>тримати в руках</h1>
 
-    <p class="hero__sub">Що шукаєте?</p>
+      <p class="hero__sub">Що шукаєте?</p>
 
-    <ul class="chips">
-      <li><a href="#works">Чашки</a></li>
-      <li><a href="#works">Тарілки</a></li>
-      <li><a href="#works">Блюдця</a></li>
-      <li><a href="#works">Набори</a></li>
-      <li><a href="#works">З написом</a></li>
-    </ul>
+      <ul class="chips">
+        <li><a href="#works">Чашки</a></li>
+        <li><a href="#works">Тарілки</a></li>
+        <li><a href="#works">Блюдця</a></li>
+        <li><a href="#works">Набори</a></li>
+        <li><a href="#works">З написом</a></li>
+      </ul>
 
-    <a class="btn btn--primary btn--lg" href="https://www.etsy.com/shop/LogosClay" target="_blank" rel="noopener">Дивитись усі роботи</a>
-    <p class="hero__note">Нехай кожен сніданок буде красивішим. А кожна чашка — трохи особливішою.</p>
+      <a class="btn btn--primary btn--lg" href="https://www.etsy.com/shop/LogosClay" target="_blank" rel="noopener">Дивитись усі роботи</a>
+      <p class="hero__note">Нехай кожен сніданок буде красивішим. А кожна чашка — трохи особливішою.</p>
+    </div>
+
+    <!-- інтерактивний об'єкт: чашка обертається сама,
+         реагує нахилом на курсор і кутом/масштабом на скрол -->
+    <div class="mug" id="mug" aria-hidden="true">
+      <div class="mug__stage" id="mugStage">
+        <video class="mug__video" id="mugVideo"
+               src="assets/video/mug.mp4"
+               poster="assets/img/mug-poster.jpg"
+               autoplay muted loop playsinline preload="auto"></video>
+      </div>
+      <p class="mug__hint" id="mugHint">поведіть курсором</p>
+    </div>
 
   </div>
 </section>
