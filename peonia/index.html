@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">PÉONIA Studio — Pfingstrosen für Floristen und private Anlässe</title>
+<meta name="description" data-i18n="meta.desc" data-i18n-attr="content" content="Premium-Pfingstrosen aus dem Breisgau. Feldfrisch geschnitten, in 24 Stunden deutschlandweit geliefert. Für Hochzeiten, private Anlässe und für Floristen mit festen Wochenkontingenten.">
+<meta name="theme-color" content="#FAFAEC">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PÉONIA Studio — Pfingstrosen für Floristen und private Anlässe">
+<meta property="og:description" content="Feldfrisch geschnittene Pfingstrosen, in 24 Stunden bei Ihnen. Vierzehn Sorten, Kühlkette ohne Lücke.">
+<meta property="og:image" content="assets/img/bouquet-hero.webp?r=2">
+<meta property="og:locale" content="de_DE">
+<link rel="alternate" hreflang="de" href="?lang=de">
+<link rel="alternate" hreflang="uk" href="?lang=uk">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=27">
+</head>
+<body>
+<div class="sponge" id="sponge" role="dialog" aria-label="Intro">
+  <canvas id="sponge-canvas" aria-hidden="true"></canvas>
+  <p class="sponge__hint" id="sponge-hint" data-i18n="sponge.hint">Bildschirm freiwischen</p>
+  <button type="button" class="sponge__skip" id="sponge-skip" data-i18n="sponge.skip">Überspringen</button>
+</div>
+
+
+<a class="skip" href="#main" data-i18n="a11y.skip">Zum Inhalt springen</a>
+
+<!-- P1 «Завіса»: рвана маска-вінок змиває темний шар і відкриває hero -->
+
+
+<header class="head" id="head">
+  <div class="head__in">
+    <a class="mark" href="#top" aria-label="PÉONIA Studio">PÉONIA<span class="mark__sub">Studio</span></a>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <a href="#sorten" data-i18n="nav.sorten">Sorten</a>
+      <a href="#kunden" data-i18n="nav.kunden">Für Sie</a>
+      <a href="#b2b" data-i18n="nav.b2b">Floristen</a>
+      <a href="#galerie" data-i18n="nav.galerie">Galerie</a>
+      <a href="#ueber" data-i18n="nav.ueber">Über uns</a>
+    </nav>
+    <div class="head__end">
+      <button type="button" class="lang" id="lang-toggle"
+              aria-label="Sprache wechseln: Ukrainisch"
+              data-i18n="a11y.lang" data-i18n-attr="aria-label">
+        <svg class="lang__globe" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.1" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M3 12h18"/>
+          <path d="M12 3c2.4 2.6 3.7 5.6 3.7 9s-1.3 6.4-3.7 9c-2.4-2.6-3.7-5.6-3.7-9S9.6 5.6 12 3z"/>
+        </svg>
+        <span class="lang__now" id="lang-now">DE</span>
+      </button>
+      <a class="pill pill--ink" href="#kontakt" data-i18n="nav.cta">Anfrage</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Menü öffnen" data-i18n-attr="aria-label" data-i18n="a11y.menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══ HERO — P2: тип, вирізане суцвіття між рядками, кругла плашка ══ -->
+<section class="hero" id="top">
+  <div class="hero__in">
+    <p class="micro hero__eyebrow" data-i18n="hero.eyebrow">01 / PÉONIA Studio — Deutschland</p>
+    <p class="hero__note hero__note--tr" data-i18n="hero.note">Feldfrisch geschnitten im Breisgau, in 24 Stunden bei Ihnen.</p>
+
+    <h1 class="hero__t">
+      <span class="hero__l1" data-i18n="hero.t1">Pfingstrosen</span>
+      <span class="hero__l2">
+        <span data-i18n="hero.t2a">für</span>
+        <em class="sw" data-i18n="hero.t2">Ihre</em>
+        <span data-i18n="hero.t3">Momente</span>
+      </span>
+    </h1>
+
+    <a class="hero__badge" href="#sorten">
+      <span data-i18n="hero.badge1">Zum</span>
+      <span data-i18n="hero.badge2">Katalog</span>
+    </a>
+
+    <div class="hero__cluster">
+      <img class="hero__bl hero__bl--l" src="assets/img/bloom-coral.webp?r=2" alt=""
+           width="768" height="762" loading="eager" aria-hidden="true">
+      <img class="hero__bl hero__bl--r" src="assets/img/bloom-blush.webp?r=2" alt=""
+           width="833" height="718" loading="eager" aria-hidden="true">
+      <img class="hero__bl hero__bl--c" src="assets/img/bloom-pink.webp?r=2"
+           alt="Aufgeblühte Pfingstrose in kräftigem Pink"
+           width="798" height="775" fetchpriority="high"
+           data-i18n-attr="alt" data-i18n="hero.alt">
+    </div>
+
+    <p class="hero__note hero__note--br" data-i18n="hero.lead">Für Hochzeiten und private Anlässe — und für Floristen, die sich auf gleichbleibende Qualität verlassen müssen.</p>
+
+    <div class="hero__foot">
+      <a class="pill pill--ink" href="#sorten" data-i18n="hero.cta1">Sorten ansehen</a>
+      <a class="pill pill--ghost" href="#b2b" data-i18n="hero.cta2">Preisliste für Floristen</a>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#vorteile"><span data-i18n="hero.scroll">Scrollen</span></a>
+</section>
+
+<!-- ══ ПЕРЕВАГИ — рівна сітка ══ -->
+<section class="sec sec--pale" id="vorteile" aria-labelledby="vorteile-t">
+  <div class="wrap">
+    <p class="micro c" data-i18n="adv.eyebrow">02 / Warum PÉONIA</p>
+    <h2 class="d-l c" id="vorteile-t"><em class="sw" data-i18n="adv.title.sw">W</em><span data-i18n="adv.title">as uns unterscheidet</span></h2>
+    <ol class="agrid">
+      <li class="acard">
+        <span class="acard__n">01</span>
+        <h3 data-i18n="adv.1.t">Schnitt am Morgen</h3>
+        <p data-i18n="adv.1.d">Wir schneiden erst, wenn Ihre Bestellung steht. Zwischen Feld und Vase liegen selten mehr als 24 Stunden.</p>
+      </li>
+      <li class="acard">
+        <span class="acard__n">02</span>
+        <h3 data-i18n="adv.2.t">Kühlkette ohne Lücke</h3>
+        <p data-i18n="adv.2.d">Von der Ernte bis zur Übergabe durchgehend 2–4 °C. Das sind zwei bis drei Tage mehr Vasenleben.</p>
+      </li>
+      <li class="acard">
+        <span class="acard__n">03</span>
+        <h3 data-i18n="adv.3.t">Ausgesuchte Sorten</h3>
+        <p data-i18n="adv.3.d">Vierzehn Sorten, ausgewählt nach Blütenform, Duft und Haltbarkeit — nicht nach Ertrag pro Quadratmeter.</p>
+      </li>
+      <li class="acard">
+        <span class="acard__n">04</span>
+        <h3 data-i18n="adv.4.t">Sortierung nach Reifegrad</h3>
+        <p data-i18n="adv.4.d">Sie bestimmen, ob die Knospen am Liefertag öffnen oder erst drei Tage später.</p>
+      </li>
+      <li class="acard">
+        <span class="acard__n">05</span>
+        <h3 data-i18n="adv.5.t">Eine feste Ansprechperson</h3>
+        <p data-i18n="adv.5.d">Ein Name, eine Nummer, Antwort am selben Werktag. Kein Ticketsystem, kein Callcenter.</p>
+      </li>
+      <li class="acard">
+        <span class="acard__n">06</span>
+        <h3 data-i18n="adv.6.t">Verlässliche Mengen</h3>
+        <p data-i18n="adv.6.d">Wochenkontingente werden vor Saisonbeginn reserviert und auch in der Spitze gehalten.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ КАТАЛОГ СОРТІВ — перекриті картки, клік відкриває опис ══ -->
+<section class="sec sec--mid" id="sorten" aria-labelledby="sorten-t">
+  <div class="wrap">
+    <p class="micro c" data-i18n="var.eyebrow">03 / Katalog</p>
+    <h2 class="d-l c" id="sorten-t"><em class="sw" data-i18n="var.title.sw">U</em><span data-i18n="var.title">nsere Sorten</span></h2>
+    <p class="isle isle--c" data-i18n="var.note">Alle vierzehn Sorten der laufenden Saison. Tippen Sie auf eine Blüte — sie öffnet sich bildschirmfüllend.</p>
+  </div>
+
+  <div class="wheel" id="wheel">
+    <div class="wheel__track" id="wheel-track">
+        <button type="button" class="wcard" data-v="0" aria-label="Sarah Bernhardt">
+          <span class="wcard__ph wcard__ph--a">
+            <img src="assets/img/bloom-blush.webp?r=2" alt="" width="985" height="743" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Sarah Bernhardt</span>
+        </button>
+        <button type="button" class="wcard" data-v="1" aria-label="Coral Charm">
+          <span class="wcard__ph wcard__ph--b">
+            <img src="assets/img/bloom-coral.webp?r=2" alt="" width="980" height="973" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Coral Charm</span>
+        </button>
+        <button type="button" class="wcard" data-v="2" aria-label="Duchesse de Nemours">
+          <span class="wcard__ph wcard__ph--c">
+            <img src="assets/img/bloom-white.webp?r=2" alt="" width="950" height="768" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Duchesse de Nemours</span>
+        </button>
+        <button type="button" class="wcard" data-v="3" aria-label="Red Charm">
+          <span class="wcard__ph wcard__ph--d">
+            <img src="assets/img/bloom-carmine.webp?r=2" alt="" width="957" height="959" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Red Charm</span>
+        </button>
+        <button type="button" class="wcard" data-v="4" aria-label="Bowl of Beauty">
+          <span class="wcard__ph wcard__ph--a">
+            <img src="assets/img/bloom-cream.webp?r=2" alt="" width="1042" height="1100" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Bowl of Beauty</span>
+        </button>
+        <button type="button" class="wcard" data-v="5" aria-label="Festiva Maxima">
+          <span class="wcard__ph wcard__ph--b">
+            <img src="assets/img/bloom-rose.webp?r=2" alt="" width="645" height="1100" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Festiva Maxima</span>
+        </button>
+        <button type="button" class="wcard" data-v="6" aria-label="Mary Nicholls">
+          <span class="wcard__ph wcard__ph--c">
+            <img src="assets/img/variety-mary-nicholls.webp?r=2" alt="" width="651" height="657" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Mary Nicholls</span>
+        </button>
+        <button type="button" class="wcard" data-v="7" aria-label="Christmas Velvet">
+          <span class="wcard__ph wcard__ph--d">
+            <img src="assets/img/variety-christmas-velvet.webp?r=2" alt="" width="845" height="893" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Christmas Velvet</span>
+        </button>
+        <button type="button" class="wcard" data-v="8" aria-label="Snow Mountain">
+          <span class="wcard__ph wcard__ph--a">
+            <img src="assets/img/variety-snow-mountain.webp?r=2" alt="" width="578" height="502" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Snow Mountain</span>
+        </button>
+        <button type="button" class="wcard" data-v="9" aria-label="Big Ben">
+          <span class="wcard__ph wcard__ph--b">
+            <img src="assets/img/variety-big-ben.webp?r=2" alt="" width="545" height="524" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Big Ben</span>
+        </button>
+        <button type="button" class="wcard" data-v="10" aria-label="Peter Brand">
+          <span class="wcard__ph wcard__ph--c">
+            <img src="assets/img/variety-peter-brand.webp?r=2" alt="" width="538" height="518" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Peter Brand</span>
+        </button>
+        <button type="button" class="wcard" data-v="11" aria-label="Buckeye Belle">
+          <span class="wcard__ph wcard__ph--d">
+            <img src="assets/img/variety-buckeye-belle.webp?r=2" alt="" width="542" height="520" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Buckeye Belle</span>
+        </button>
+        <button type="button" class="wcard" data-v="12" aria-label="Catharina Fontijn">
+          <span class="wcard__ph wcard__ph--a">
+            <img src="assets/img/variety-catharina-fontijn.webp?r=2" alt="" width="590" height="541" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Catharina Fontijn</span>
+        </button>
+        <button type="button" class="wcard" data-v="13" aria-label="Jacorma">
+          <span class="wcard__ph wcard__ph--b">
+            <img src="assets/img/variety-jacorma.webp?r=2" alt="" width="613" height="639" loading="lazy" aria-hidden="true">
+          </span>
+          <span class="wcard__name">Jacorma</span>
+        </button>
+    </div>
+  </div>
+  <p class="wheel__hint micro" data-i18n="var.hint">Ziehen oder auf eine Blüte tippen</p>
+
+  <div class="stack__cta">
+    <a class="pill pill--ink" href="#kontakt">
+      <span data-i18n="var.cta">Verfügbarkeit anfragen</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+           aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </a>
+    <p data-i18n="var.ctanote">vierzehn Sorten, Verfügbarkeit wöchentlich aktualisiert</p>
+  </div>
+</section>
+
+<!-- ══ ПРИВАТНИМ / ФЛОРИСТАМ — P7 «Триптих» 35/30/35 ══ -->
+<section class="tri" id="kunden" aria-labelledby="kunden-t">
+  <h2 class="vh" id="kunden-t" data-i18n="tri.title">Für private Kundinnen und für Floristen</h2>
+
+  <!-- ліворуч: яскравий акцентний ґрунт, дрібне фото, біла овальна кнопка -->
+  <div class="tri__panel tri__panel--accent">
+    <p class="micro" data-i18n="tri.a.eyebrow">Privat</p>
+    <span class="tri__thumb">
+      <img src="assets/img/bloom-blush.webp?r=2" alt="" width="833" height="718"
+           loading="lazy" aria-hidden="true">
+    </span>
+    <h3 class="tri__h"><em class="sw" data-i18n="tri.a.title.sw">F</em><span data-i18n="tri.a.title">ür Ihren Anlass</span></h3>
+    <a class="pill pill--oval" href="#kontakt" data-i18n="tri.a.cta">Strauß anfragen</a>
+  </div>
+
+  <!-- центр: велике макро-фото на весь виліт -->
+  <div class="tri__panel tri__panel--photo">
+    <img src="assets/img/panel-macro.webp?r=2" alt="Pfingstrosenknospen dicht an dicht, kurz nach dem Schnitt"
+         width="760" height="1240" loading="lazy" data-i18n-attr="alt" data-i18n="tri.b.alt">
+  </div>
+
+  <!-- праворуч: світлий ivory, курсивний заголовок, тонкий підзаголовок, опис -->
+  <div class="tri__panel tri__panel--type">
+    <span class="tri__thumb tri__thumb--sq">
+      <img src="assets/img/panel-macro-sm.webp?r=2" alt="" width="620" height="620"
+           loading="lazy" aria-hidden="true">
+    </span>
+    <p class="tri__script" data-i18n="tri.c.script">für</p>
+    <p class="tri__sub" data-i18n="tri.c.sub">Floristen</p>
+    <p class="caps tri__text" data-i18n="tri.c.text">Feste Wochenkontingente, Lieferung dienstags und freitags, Sortierung nach Ihrem Reifegrad. Staffelpreise ab 50 Stielen, Saisonreservierung ab 200.</p>
+    <a class="tri__link" href="#b2b">
+      <span data-i18n="tri.c.cta">Konditionen ansehen</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+           aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ══ ФІЛОСОФІЯ — P6 «Прокол» ══ -->
+<section class="sec sec--cream pierce" id="philosophie" aria-labelledby="phil-t">
+  <h2 class="vh" id="phil-t" data-i18n="phil.title">Unsere Haltung</h2>
+  <div class="pierce__in">
+    <p class="pierce__t pierce__t--l" data-i18n="phil.left">Wir führen kein Sortiment.</p>
+    <img class="pierce__img" src="assets/img/plant-stem.webp?r=2" alt="" width="502" height="980" loading="lazy" aria-hidden="true">
+    <p class="pierce__t pierce__t--r" data-i18n="phil.right">Wir führen vierzehn Sorten.</p>
+  </div>
+  <p class="pierce__sub wrap">
+    <span data-i18n="phil.s1">Und von jeder kennen wir den einen Tag, an dem sie am</span>
+    <em class="sw sw--word" data-i18n="phil.s2">schönsten</em>
+    <span data-i18n="phil.s3">ist. Das ist der Tag, an dem wir schneiden — keinen früher, keinen später.</span>
+  </p>
+</section>
+
+<!-- ══ B2B — P5 «Пара + цифри» на темному ══ -->
+<section class="sec sec--green" id="b2b" aria-labelledby="b2b-t">
+  <div class="wrap">
+    <p class="micro" data-i18n="b2b.eyebrow">04 / Großhandel</p>
+    <h2 class="d-l" id="b2b-t"><em class="sw" data-i18n="b2b.title.sw">F</em><span data-i18n="b2b.title">ür Floristen und Blumengeschäfte</span></h2>
+  </div>
+  <div class="pair wrap">
+    <figure class="pair__lg">
+      <img src="assets/img/bloom-coral.webp?r=2" alt="Pfingstrosen im Großgebinde, nach Reifegrad sortiert" width="768" height="762" loading="lazy" data-i18n-attr="alt" data-i18n="b2b.alt1">
+    </figure>
+    <div class="pair__col">
+      <figure class="pair__sm">
+        <img src="assets/img/bloom-cream.webp?r=2" alt="Knospen nach Reifegrad sortiert" width="853" height="900" loading="lazy" data-i18n-attr="alt" data-i18n="b2b.alt2">
+      </figure>
+      <p class="pair__cap" data-i18n="b2b.text">Sie bestellen bis Sonntag, wir liefern dienstags und freitags. Jede Lieferung kommt nach Ihrem Reifegrad sortiert, mit Sortenschild und Schnittdatum am Bund. Ab 200 Stielen reservieren wir Ihr Kontingent für die ganze Saison — auch in der Hochzeitsspitze im Juni.</p>
+      <a class="pill pill--light" href="#kontakt" data-i18n="b2b.cta">Preisliste anfordern</a>
+    </div>
+  </div>
+  <ul class="stats wrap">
+    <li><span class="stats__n">24<sup data-i18n="b2b.s1.u">(Std.)</sup></span><p data-i18n="b2b.s1.d">von der Ernte bis zur Lieferung</p></li>
+    <li><span class="stats__n">14<sup data-i18n="b2b.s2.u">(Sorten)</sup></span><p data-i18n="b2b.s2.d">in der laufenden Saison verfügbar</p></li>
+    <li><span class="stats__n">50<sup data-i18n="b2b.s3.u">(Stiele)</sup></span><p data-i18n="b2b.s3.d">ab dieser Menge gilt der Staffelpreis</p></li>
+    <li><span class="stats__n">8<sup data-i18n="b2b.s4.u">(Tage)</sup></span><p data-i18n="b2b.s4.d">durchschnittliches Vasenleben</p></li>
+  </ul>
+</section>
+
+<!-- ══ ГАЛЕРЕЯ — P4 «Розсип» + лайтбокс ══ -->
+<section class="sec sec--mid" id="galerie" aria-labelledby="galerie-t">
+  <div class="wrap wrap--split">
+    <div>
+      <p class="micro" data-i18n="gal.eyebrow">05 / Galerie</p>
+      <h2 class="d-l" id="galerie-t"><em class="sw" data-i18n="gal.title.sw">G</em><span data-i18n="gal.title">alerie</span></h2>
+    </div>
+    <p class="isle" data-i18n="gal.note">Sträuße und unsere Felder — Aufnahmen aus der laufenden und der vergangenen Saison, ohne Nachfärbung.</p>
+  </div>
+  <div class="rail rail--gal" data-rail>
+    <ul class="rail__track" id="gal-track">
+      <li class="gcard gcard--tall"><button type="button" data-lb="0"><img src="assets/img/gallery-01.webp?r=2" alt="Großer Strauß aus Korall-Pfingstrosen" width="900" height="1150" loading="lazy"></button></li>
+      <li class="gcard gcard--wide"><button type="button" data-lb="1"><img src="assets/img/gallery-02.webp?r=2" alt="Gebundene Sträuße in Kraftpapier" width="1150" height="900" loading="lazy"></button></li>
+      <li class="gcard "><button type="button" data-lb="2"><img src="assets/img/gallery-03.webp?r=2" alt="Frisch geschnittener Strauß am Gewächshaus" width="900" height="900" loading="lazy"></button></li>
+      <li class="gcard gcard--tall"><button type="button" data-lb="3"><img src="assets/img/gallery-04.webp?r=2" alt="Strauß in Pink, fertig zur Übergabe" width="900" height="1150" loading="lazy"></button></li>
+      <li class="gcard gcard--wide"><button type="button" data-lb="4"><img src="assets/img/gallery-05.webp?r=2" alt="Gebinde aus Korall und Rosé" width="1150" height="900" loading="lazy"></button></li>
+      <li class="gcard gcard--wide"><button type="button" data-lb="5"><img src="assets/img/gallery-06.webp?r=2" alt="Pfingstrosenfeld unter offenem Himmel" width="1150" height="900" loading="lazy"></button></li>
+      <li class="gcard gcard--tall"><button type="button" data-lb="6"><img src="assets/img/gallery-07.webp?r=2" alt="Reihen kurz vor der Ernte" width="900" height="1150" loading="lazy"></button></li>
+      <li class="gcard "><button type="button" data-lb="7"><img src="assets/img/gallery-08.webp?r=2" alt="Feld im Morgenlicht" width="900" height="900" loading="lazy"></button></li>
+      <li class="gcard gcard--wide"><button type="button" data-lb="8"><img src="assets/img/gallery-09.webp?r=2" alt="Feld in der Abendsonne" width="1150" height="900" loading="lazy"></button></li>
+      <li class="gcard gcard--tall"><button type="button" data-lb="9"><img src="assets/img/gallery-10.webp?r=2" alt="Pfingstrosen im Studiogarten" width="900" height="1150" loading="lazy"></button></li>
+    </ul>
+  </div>
+  <p class="rail__hint wrap"><span data-i18n="rail.hint">Ziehen oder wischen</span></p>
+</section>
+
+<!-- ══ ВІДГУКИ — P2 «Квітка в тексті» ══ -->
+<section class="sec sec--deep voices" id="stimmen" aria-labelledby="voices-t">
+  <div class="voices__head wrap">
+    <img class="voices__bloom" src="assets/img/bloom-coral.webp?r=2" alt="" width="768" height="762" loading="lazy" aria-hidden="true">
+    <p class="micro" data-i18n="voi.eyebrow">06 / Stimmen</p>
+    <h2 class="d-xl" id="voices-t"><em class="sw" data-i18n="voi.title.sw">S</em><span data-i18n="voi.title">timmen</span></h2>
+    <a class="badge" href="#kontakt">
+      <span data-i18n="voi.badge1">Anfrage</span><span data-i18n="voi.badge2">senden</span>
+    </a>
+  </div>
+  <ul class="quotes wrap">
+    <li class="quote">
+      <blockquote><p data-i18n="voi.1.q">Die Knospen kamen genau so fest, wie ich sie bestellt hatte — und am Hochzeitstag waren sie offen. Das hat mir vorher niemand zusagen wollen.</p></blockquote>
+      <p class="quote__who"><strong data-i18n="voi.1.n">Marie Lehmann</strong><span data-i18n="voi.1.r">Braut, Freiburg</span></p>
+    </li>
+    <li class="quote">
+      <blockquote><p data-i18n="voi.2.q">Drei Saisons, jede Woche eine Lieferung, keine einzige Reklamation. Ich rechne inzwischen fest mit dem Dienstag.</p></blockquote>
+      <p class="quote__who"><strong data-i18n="voi.2.n">Anja Wolter</strong><span data-i18n="voi.2.r">Floristin, Blumenatelier Wolter, Köln</span></p>
+    </li>
+    <li class="quote">
+      <blockquote><p data-i18n="voi.3.q">Die Staffelpreise ab 200 Stielen haben unsere Marge im Juni spürbar verändert. Und die Ware kommt sortiert, das spart uns jeden Morgen eine Stunde.</p></blockquote>
+      <p class="quote__who"><strong data-i18n="voi.3.n">Thomas Reiners</strong><span data-i18n="voi.3.r">Inhaber, Blumenhaus Reiners, Düsseldorf</span></p>
+    </li>
+  </ul>
+</section>
+
+<!-- ══ ПРО НАС — P5 «Пара + цифри» ══ -->
+<section class="sec sec--pale" id="ueber" aria-labelledby="ueber-t">
+  <div class="wrap">
+    <p class="micro" data-i18n="abt.eyebrow">07 / Über uns</p>
+    <h2 class="d-l" id="ueber-t"><em class="sw" data-i18n="abt.title.sw">Ü</em><span data-i18n="abt.title">ber uns</span></h2>
+  </div>
+  <div class="pair wrap">
+    <figure class="pair__lg pair__lg--photo">
+      <img src="assets/img/about-founder.webp?r=2" alt="Gründerin mit frisch geschnittenem Strauß auf dem Feld im Breisgau" width="900" height="1125" loading="lazy" data-i18n-attr="alt" data-i18n="abt.alt1">
+    </figure>
+    <div class="pair__col">
+      <figure class="pair__sm">
+        <img src="assets/img/bloom-white.webp?r=2" alt="Arbeitstisch im Studio mit frisch geschnittenen Stielen" width="732" height="612" loading="lazy" data-i18n-attr="alt" data-i18n="abt.alt2">
+      </figure>
+      <p class="pair__cap" data-i18n="abt.text">Angefangen hat alles mit dreihundert Wurzelstöcken auf einem Feld im Breisgau. Heute stehen dort vierzehn Sorten, und wir schneiden für Hochzeiten in ganz Deutschland und für Floristen, die morgens um sechs schon wissen wollen, was am Nachmittag auf ihrem Arbeitstisch liegt. Daraus ist keine Gärtnerei geworden, sondern ein Studio: Wir bauen nicht möglichst viel an, sondern das, wofür wir geradestehen können.</p>
+      <p class="sig"><em class="sw sw--word" data-i18n="abt.sig">Gründerin</em><span data-i18n="abt.sig2">PÉONIA Studio, Breisgau</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ФІНАЛЬНИЙ CTA — P8 «Тип на фото» ══ -->
+<section class="close" id="kontakt" aria-labelledby="kontakt-t">
+  <img class="close__bloom" src="assets/img/bloom-magenta.webp?r=2" alt=""
+       width="900" height="813" loading="lazy" aria-hidden="true">
+  <div class="close__in wrap">
+    <div class="close__copy">
+      <p class="micro" data-i18n="cta.eyebrow">08 / Anfrage</p>
+      <h2 class="d-l" id="kontakt-t"><em class="sw" data-i18n="cta.title.sw">S</em><span data-i18n="cta.title">chreiben Sie uns</span></h2>
+      <p class="caps" data-i18n="cta.text">Antwort am selben Werktag. Für Floristen legen wir die aktuelle Preisliste und die freien Wochenkontingente bei.</p>
+      <ul class="contact">
+        <li><span class="micro" data-i18n="cta.c1">E-Mail</span><a href="mailto:hallo@peonia-studio.de">hallo@peonia-studio.de</a></li>
+        <li><span class="micro" data-i18n="cta.c2">Telefon</span><a href="tel:+4976100000000">+49 761 000 000 0</a></li>
+        <li><span class="micro" data-i18n="cta.c3">Studio</span><span data-i18n="cta.c3v">Talstraße 4, 79199 Kirchzarten</span></li>
+        <li><span class="micro" data-i18n="cta.c4">Saison</span><span data-i18n="cta.c4v">Mai bis Juli</span></li>
+      </ul>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <div class="f">
+        <label for="f-name" data-i18n="form.name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="err" data-err="f-name" data-i18n="form.e.name">Bitte tragen Sie Ihren Namen ein.</p>
+      </div>
+      <div class="f">
+        <label for="f-mail" data-i18n="form.mail">E-Mail</label>
+        <input id="f-mail" name="email" type="email" autocomplete="email" required>
+        <p class="err" data-err="f-mail" data-i18n="form.e.mail">Bitte prüfen Sie die E-Mail-Adresse.</p>
+      </div>
+      <div class="f">
+        <label for="f-tel"><span data-i18n="form.tel">Telefon</span> <span data-i18n="form.opt">(optional)</span></label>
+        <input id="f-tel" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="f">
+        <label for="f-type" data-i18n="form.type">Ich bestelle als</label>
+        <select id="f-type" name="type" required>
+          <option value="" data-i18n="form.type.0">Bitte wählen</option>
+          <option value="privat" data-i18n="form.type.1">Privatperson</option>
+          <option value="florist" data-i18n="form.type.2">Floristin / Florist</option>
+          <option value="handel" data-i18n="form.type.3">Blumengeschäft</option>
+        </select>
+        <p class="err" data-err="f-type" data-i18n="form.e.type">Bitte wählen Sie eine Option.</p>
+      </div>
+      <div class="f">
+        <label for="f-date" data-i18n="form.date">Wunschtermin</label>
+        <input id="f-date" name="date" type="date">
+      </div>
+      <div class="f">
+        <label for="f-qty" data-i18n="form.qty">Menge (Stiele)</label>
+        <input id="f-qty" name="qty" type="number" min="1" step="1" inputmode="numeric">
+      </div>
+      <div class="f f--full">
+        <label for="f-msg" data-i18n="form.msg">Nachricht</label>
+        <textarea id="f-msg" name="message" rows="4"></textarea>
+      </div>
+      <div class="f f--full form__foot">
+        <button class="pill pill--ink" type="submit" data-i18n="form.send">Anfrage senden</button>
+        <p class="form__note" data-i18n="form.note">Wir melden uns am selben Werktag. Ihre Angaben gehen ausschließlich an PÉONIA Studio.</p>
+      </div>
+      <p class="form__ok" id="form-ok" role="status" hidden data-i18n="form.ok">Vielen Dank — Ihre Anfrage ist notiert. Wir antworten am selben Werktag.</p>
+    </form>
+  </div>
+</section>
+
+
+<!-- повноекранний перегляд сорту -->
+<div class="vview" id="vview" hidden role="dialog" aria-modal="true" aria-label="Sorte">
+  <button type="button" class="vview__close" id="vview-close" aria-label="Schließen"
+          data-i18n="a11y.close" data-i18n-attr="aria-label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button type="button" class="vview__nav vview__nav--prev" id="vview-prev" aria-label="Zurück"
+          data-i18n="a11y.prev" data-i18n-attr="aria-label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button type="button" class="vview__nav vview__nav--next" id="vview-next" aria-label="Weiter"
+          data-i18n="a11y.next" data-i18n-attr="aria-label">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="vview__stage">
+    <div class="vview__item" id="v-0" hidden>
+      <div class="vview__ph"><img src="assets/img/bloom-blush.webp?r=2" alt="Sarah Bernhardt" width="985" height="743" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Sarah Bernhardt</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.1.color">Zartrosa</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.1.season">Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>12–14 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.1.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-1" hidden>
+      <div class="vview__ph"><img src="assets/img/bloom-coral.webp?r=2" alt="Coral Charm" width="980" height="973" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Coral Charm</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.2.color">Korall-Apricot</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.2.season">Ende Mai</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>14–16 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.2.stock">Begrenzt</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-2" hidden>
+      <div class="vview__ph"><img src="assets/img/bloom-white.webp?r=2" alt="Duchesse de Nemours" width="950" height="768" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Duchesse de Nemours</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.3.color">Elfenbein</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.3.season">Anfang Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>11–13 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.3.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-3" hidden>
+      <div class="vview__ph"><img src="assets/img/bloom-carmine.webp?r=2" alt="Red Charm" width="957" height="959" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Red Charm</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.4.color">Tiefrot</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.4.season">Ende Mai</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>15–17 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.4.stock">Begrenzt</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-4" hidden>
+      <div class="vview__ph"><img src="assets/img/bloom-cream.webp?r=2" alt="Bowl of Beauty" width="1042" height="1100" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Bowl of Beauty</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.5.color">Rosa, creme Mitte</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.5.season">Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>13–15 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.5.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-5" hidden>
+      <div class="vview__ph"><img src="assets/img/bloom-rose.webp?r=2" alt="Festiva Maxima" width="645" height="1100" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Festiva Maxima</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.6.color">Weiß mit Karmin</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.6.season">Anfang Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>12–14 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.6.stock">Wenige Reste</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-6" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-mary-nicholls.webp?r=2" alt="Mary Nicholls" width="651" height="657" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Mary Nicholls</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.7.color">Reinweiß</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.7.season">Anfang Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>13–15 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.7.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-7" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-christmas-velvet.webp?r=2" alt="Christmas Velvet" width="845" height="893" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Christmas Velvet</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.8.color">Dunkelrot</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.8.season">Mitte Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>13–15 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.8.stock">Begrenzt</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-8" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-snow-mountain.webp?r=2" alt="Snow Mountain" width="578" height="502" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Snow Mountain</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.9.color">Cremeweiß</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.9.season">Anfang Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>12–14 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.9.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-9" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-big-ben.webp?r=2" alt="Big Ben" width="545" height="524" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Big Ben</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.10.color">Tiefrot</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.10.season">Anfang Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>14–16 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.10.stock">Begrenzt</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-10" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-peter-brand.webp?r=2" alt="Peter Brand" width="538" height="518" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Peter Brand</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.11.color">Dunkles Burgund</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.11.season">Mitte Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>13–15 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.11.stock">Begrenzt</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-11" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-buckeye-belle.webp?r=2" alt="Buckeye Belle" width="542" height="520" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Buckeye Belle</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.12.color">Dunkelrot, halbgefüllt</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.12.season">Ende Mai</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>12–14 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.12.stock">Wenige Reste</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-12" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-catharina-fontijn.webp?r=2" alt="Catharina Fontijn" width="590" height="541" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Catharina Fontijn</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.13.color">Zartrosa</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.13.season">Mitte Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>13–15 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.13.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+    <div class="vview__item" id="v-13" hidden>
+      <div class="vview__ph"><img src="assets/img/variety-jacorma.webp?r=2" alt="Jacorma" width="613" height="639" loading="lazy"></div>
+      <div class="vview__meta">
+        <p class="micro" data-i18n="var.badge">Sorte</p>
+        <h3>Jacorma</h3>
+        <dl class="spec">
+          <div><dt data-i18n="var.f.color">Farbe</dt><dd data-i18n="var.14.color">Kräftiges Pink</dd></div>
+          <div><dt data-i18n="var.f.season">Saison</dt><dd data-i18n="var.14.season">Juni</dd></div>
+          <div><dt data-i18n="var.f.bud">Knospe</dt><dd>14–16 cm</dd></div>
+          <div><dt data-i18n="var.f.stock">Verfügbar</dt><dd data-i18n="var.14.stock">Ganze Saison</dd></div>
+        </dl>
+        <a class="pill pill--ink" href="#kontakt" data-i18n="var.cta">Verfügbarkeit anfragen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <p class="mark mark--foot">PÉONIA<span class="mark__sub">Studio</span></p>
+      <p class="foot__claim" data-i18n="foot.claim">Pfingstrosen aus dem Breisgau — feldfrisch, gekühlt, auf den Tag genau.</p>
+    </div>
+    <div class="foot__col">
+      <p class="micro" data-i18n="foot.contact">Kontakt</p>
+      <a href="mailto:hallo@peonia-studio.de">hallo@peonia-studio.de</a>
+      <a href="tel:+4976100000000">+49 761 000 000 0</a>
+      <p data-i18n="cta.c3v">Talstraße 4, 79199 Kirchzarten</p>
+    </div>
+    <div class="foot__col">
+      <p class="micro" data-i18n="foot.hours">Erreichbar</p>
+      <p data-i18n="foot.h1">Mo – Fr, 8 – 17 Uhr</p>
+      <p data-i18n="foot.h2">Sa, 8 – 12 Uhr</p>
+    </div>
+    <div class="foot__col">
+      <p class="micro" data-i18n="foot.social">Folgen</p>
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+  <div class="wrap foot__legal">
+    <p>© <span id="year">2026</span> PÉONIA Studio</p>
+    <nav aria-label="Rechtliches">
+      <a href="#" data-i18n="foot.imp">Impressum</a>
+      <a href="#" data-i18n="foot.dsg">Datenschutz</a>
+      <a href="#" data-i18n="foot.agb">AGB</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden>
+  <div class="lb__bg" data-lb-close></div>
+  <div class="lb__box" role="dialog" aria-modal="true" aria-label="Galerie" data-i18n-attr="aria-label" data-i18n="a11y.lb">
+    <img class="lb__img" id="lb-img" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+    <button class="lb__x" type="button" data-lb-close aria-label="Schließen" data-i18n-attr="aria-label" data-i18n="a11y.close">×</button>
+    <button class="lb__nav lb__nav--prev" type="button" id="lb-prev" aria-label="Zurück" data-i18n-attr="aria-label" data-i18n="a11y.prev">‹</button>
+    <button class="lb__nav lb__nav--next" type="button" id="lb-next" aria-label="Weiter" data-i18n-attr="aria-label" data-i18n="a11y.next">›</button>
+  </div>
+</div>
+
+<script src="assets/js/i18n.js?v=27"></script>
+<script src="assets/js/main.js?v=27"></script>
+</body>
+</html>
